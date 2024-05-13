@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Games&Apps</title>
+    <style>
+    
+        body {
+        background-color:black;
+        padding: 20px;
+        }
+        
+        
+        #header{position: relative;
+            top: 0;
+            left: 0;
+            padding: 30px 100px;
+            width: 100px;
+            display: flex;
+            justify-content: space-between;
+            align-items: left;
+            z-index: index 10000; 
+        }
+        #header ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+    #header ul li{
+    list-style-type: none;
+    margin-left: 20px;
+    font-size: 14px;
+    
+    }
+    #header ul li a{
+    text-decoration: none;
+    padding: 6px 15px;
+    color:antiquewhite;
+    border-radius: 2px;
+    
+    }
+    #header ul li a:hover
+    {
+      background: linear-gradient(45deg,red,red);
+    
+    }
+    img#slide{
+                width: 40%;
+                height: 320px;
+                padding: none;
+                margin: none;
+                border-radius: 5%;
+                size-adjust: 50px;
+                
+            }
+            .row .col{
+        
+                align-content: space-between;
+            
+            align-items: flex-start;
+    
+    float: left;
+    justify-content: left;
+    align-items: center;
+    margin: 20px;}
+    
+        
+      .row .col:first-child{
+    margin: 0px;
+    margin-left: 5px;
+    
+      }
+       .row .col img{
+        transition: 0.8s;
+        border-radius: 2%;
+    
+      } .row .col img:hover{
+        transform: scale(1.1);
+        cursor: pointer;}
+        p{color: whitesmoke;}
+        #sitetitle{color: aliceblue;}
+        #sitemotto {color: aliceblue;}
+        
+footer{
+ background-color: black;
+  text-align: center;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  
+  }
+  
+  footer p{text-align: center;}
+  footer a>img{
+    border-radius: 50%;
+    height: 45px;
+  }
+  
+  @media  (max-width:500px) {
+    body
+  {
+    background-color: gray;
+   
+  
+    margin: auto;
+    
+  }
+    #ulmenu li
+    {
+      display: block;
+   
+  
+    }
+   
+#header ul{
+  display: block;
+  justify-content: left;
+  
+  }
+}
+
+
+ 
+
+  
+ </style>
+</head>
+<body>
+    <header id="header"> 
+        <img src="images/Movies/Screenshot 2024-04-20 223802.png" alt="">
+        <h1 id="sitetitle">Games&Apps</h1>
+
+       
+        <ul>
+            <li><a href="Index.html" class="active"><b>Home</b></a></li>
+            <li><a href="Movies.html" class="active"><b>Movies</b></a></li>
+            <li><a href="Tv Shows.html" class="active"><b>TvShows</b></a></li>
+            <li><a href="Games & Apps.html" class="active"><b>Games&Apps</b></a></li>
+            <li><a href="Collections.html" class="active"><b>Collections</b></a></li>
+            <li><a href="Feedback.html" class="active"><b>Feedback</b></a></li>
+        
+        </ul>
+       
+    </header>
+    
+     <h2 id="sitemotto"> Lets Enjoy Gaming!!!</h2> 
+    <div class="sec">
+
+        <img id="slide" src="" alt="Gallery Image" title="Games&Apps" onerror="this.onerror=null; this.src=images/TvShows;">
+    </div>
+    <script>
+        //create image array
+        var arrimages=new Array();
+        //add images to array
+        for(var k=0;k<10;k++){
+            arrimages[k]="images/Games&Apps/"+ k +".jpeg";
+        }
+        //variable for current image index
+        var currentimageindex=0;
+        //slideshow function
+        function Slideshow(){
+            //get image tag and load image
+            document.getElementById("slide").src=arrimages[currentimageindex];
+            //tinary operater
+            currentimageindex=(currentimageindex<=arrimages.length-1)?currentimageindex+1:0;
+        }
+        //call slideshow everytime u want(every 5/10 secs)
+        setInterval("Slideshow()",2000);
+    </script>
+    
+    <div class="row">
+        <div class="col">
+            <a href="Gears of war.html">
+            <img src="images/Movies/Gears of warGame.jpeg" alt="" title="Gears of warGame">
+            <p>Gears of war-2015</p>
+
+        </div>
+        <div class="col">
+            <a href="TimeRace.htm">
+            <img src="images/Games&Apps/10.jpeg" alt="">
+            <p>TimeRace-2011</p>
+        </div>
+        
+        <div class="col">
+            <a href="MineCraft.html">
+            <img src="images/Games&Apps/2.jpeg" alt="">
+            <p>MineCraft-2015</p>
+
+
+        </div>
+        
+        <div class="col">
+            <a href="Gears of war.html">
+            <img src="images/Games&Apps/4.jpeg" alt="">
+            <p>Gears of war-2015</p>
+
+        </div>
+        <div class="col">
+            <a href="">
+            <img src="images/Games&Apps/3.jpeg" alt="">
+            <p>Enders Game-2018</p>
+
+
+        </div>
+       
+        <div class="col">
+            <a href="">
+            <img src="images/Games&Apps/5.jpeg" alt="">
+            <p>The last of us-2009</p>
+
+        </div>
+        <div class="col">
+            <a href="">
+            <img src="images/Games&Apps/6.jpeg" alt="">
+            <p>Grand theft Auto-2015</p>
+        </div>
+
+        <div class="col">
+            <a href="">
+            <img src="images/Games&Apps/7.jpeg" alt="">
+            <p>Gardians of-the Gallexy-2017</p>
+            
+        </div>
+           <div class="col">
+                <img src="images/Games&Apps/8.jpeg" alt="">
+                <p>Elden Ring-2020</p>
+            </div>
+            <div class="col">
+                <a href="">
+                <img src="images/Games&Apps/9.jpeg" alt="">
+                <p>Spider Man-2004</p>
+    
+            </div>
+            <div class="col">
+                <a href="">
+                <img src="images/Games&Apps/0.jpeg" alt="">
+                <p>Retro Game-2011</p>
+    
+            </div>
+            <div class="col">
+                <a href="">
+                <img src="images/Movies/AllGood game.jpeg" alt="">
+                <p>CyberPink-2010</p>
+            </div>
+        </div>
+            
+        <footer class="master">
+            <P>Copyright@WarnerBros2024</P>
+            <span id="Facebook">
+                <a href="https://web.facebook.com/WarnerBrosPictures/?_rdc=1&_rdr">
+                    <img src="images/social media/fb.png"tittle="Facebook"alt="Facebook">
+    
+                </a>
+    
+            </span>
+           
+            <span id="Instagram">
+                <a href="https://www.instagram.com/warnerbrosentertainment/">
+                    <img src="images/social media/instagram.jpg"tittle="Instagram"alt="Instagram">
+    
+    
+                </a>
+    
+            </span>
+        </span>
+       
+    
+    <span id="Twitter">
+        <a href="https://twitter.com/warnerbros"> 
+            <img src="images/social media/twitter.jpg"tittle="Twitter"alt="Twitter">    
+    
+        </a>
+    
+       </span>
+    
+        </footer>   
+</body>
+</html>

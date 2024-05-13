@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tv Shows</title>
+    <style>
+    
+    body {
+    background-color: black;
+    padding: 20px;
+    }
+    
+    
+    #header{position: relative;
+        top: 0;
+        left: 0;
+        padding: 30px 100px;
+        width: 100px;
+        display: flex;
+        justify-content: space-between;
+        align-items: left;
+        z-index: index 10000; 
+    }
+    #header ul{
+display: flex;
+justify-content: center;
+align-items: center;
+}
+#header ul li{
+list-style-type: none;
+margin-left: 20px;
+font-size: 14px;
+
+}
+#header ul li a{
+text-decoration: none;
+padding: 6px 15px;
+color:antiquewhite;
+border-radius: 2px;
+
+}
+#header ul li a:hover
+{
+  background: linear-gradient(45deg,red,red);
+
+}
+img#slide{
+            width: 40%;
+            height: 340px;
+            padding: none;
+            margin: none;
+            border-radius: 5%;
+            size-adjust: 50px;
+        }
+        .row .col{
+    
+            align-content: space-between;
+            
+            align-items: flex-start;
+    
+    float: left;
+    justify-content: left;
+    align-items: center;
+    margin: 20px;}
+    
+    .row .col:first-child{
+margin: 0px;
+margin-left: 5px;
+
+  }
+   .row .col img{
+    transition: 0.8s;
+    border-radius: 2%;
+     
+
+  } .row .col img:hover{
+    transform: scale(1.1);
+    cursor: pointer;}
+    p{color: whitesmoke;}
+    #sitetitle{color: aliceblue;}
+    #sitemotto{color: aliceblue;}
+       
+footer{
+ background-color: black;
+  text-align: center;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  
+  }
+  footer a>img{
+    border-radius: 50%;
+    height: 45px;
+  }
+   
+  @media  (max-width:500px) {
+    body
+  {
+    background-color: gray;
+   
+  
+    margin: auto;
+    
+  }
+    #ulmenu li
+    {
+      display: block;
+   
+  
+    }
+   
+#header ul{
+  display: block;
+  justify-content: left;
+  
+  }
+}
+
+
+
+  
+
+ 
+
+
+        
+        </style>
+</head>
+<body>
+    
+    <header id="header"> 
+        <img src="images/Movies/Screenshot 2024-04-20 223802.png" alt="">
+         
+        <h1 id="sitetitle">TvShows</h1>
+
+       
+        <ul>
+            <li><a href="Index.html" class="active"><b>Home</b></a></li>
+            <li><a href="Movies.html" class="active"><b>Movies</b></a></li>
+            <li><a href="Tv Shows.html" class="active"><b>TvShows</b></a></li>
+            <li><a href="Tv Shows.html" class="active"><b>Games&Apps</b></a></li>
+            <li><a href="Collections.html" class="active"><b>Collections</b></a></li>
+            <li><a href="Feedback.html" class="active"><b>Feedback</b></a></li>
+        </ul>
+       
+    </header>
+    
+     <h2 id="sitemotto"> Enjoy the best TvShows ever!!!</h2> 
+    <div class="sec">
+
+        <img id="slide" src="" alt="Gallery Image" title="TvShows" onerror="this.onerror=null; this.src=images/TvShows;">
+    </div>
+    <script>
+        //create image array
+        var arrimages=new Array();
+        //add images to array
+        for(var k=0;k<10;k++){
+            arrimages[k]="images/TvShows/"+ k +".jpeg";
+        }
+        //variable for current image index
+        var currentimageindex=0;
+        //slideshow function
+        function Slideshow(){
+            //get image tag and load image
+            document.getElementById("slide").src=arrimages[currentimageindex];
+            //tinary operater
+            currentimageindex=(currentimageindex<=arrimages.length-1)?currentimageindex+1:0;
+        }
+        //call slideshow everytime u want(every 5/10 secs)
+        setInterval("Slideshow()",2000);
+    </script>
+    
+    <div class="row">
+        <div class="col">
+            <a href="BigBang.html">
+            <img src="images/Movies/BangBang-Tv.jpeg" alt=""
+           > <p>BigBang-2012</p>
+
+        </div>
+        <div class="col">
+            <a href="NewGirl.html">
+            <img src="images/TvShows/9.jpeg" alt="">
+            <p>NewGirl-2012</p>
+        </div>
+        <div class="col">
+            <a href="https://youtu.be/vzVhPCMAxWQ">
+            <img src="images/Movies/ArrestedTV.jpeg" alt="">
+            <p>Arrested Development-2010</p>
+        </div>
+        <div class="col">
+            <a href="https://youtu.be/IdkwXd6heRU">
+            <img src="images/Movies/HighTown-tv.jpeg" alt="">
+            <p>High Town-2010</p>
+            
+
+        </div>
+        <div class="col">
+            <a href="https://youtu.be/UTOJixeILJA">
+            <img src="images/Movies/WatchmenTv.jpeg" alt="">
+            <p>Watchmen-2008</p>
+        </div>
+       
+        <div class="col">
+            <a href="https://youtu.be/kFSm6gany_Q">
+            <img src="images/Movies/Star Woririers.jpeg" alt="">
+            <p>StarWorriers-2010</p>
+        </div>
+        <div class="col">
+            <a href="https://youtu.be/8O3Y63VEX0A">
+            <img src="images/Movies/Game-TheCaptainisDead.jpeg" alt="">
+            <p>TheCaptainisDead-2013</p>
+        </div>
+        <div class="col">
+            <a href="">
+            <img src="images/Movies/iconic.jpeg" alt="">
+            <p>Back-to-the-Future-2015</p>
+
+        </div>
+        <div class="col">
+            <a href="">
+            <img src="images/Movies/HomeforDarkTv.jpeg" alt="">
+            <p>HomeforDark-2020</p>
+        </div>
+        
+        <div class="col">
+            <a href="">
+            <img src="images/Movies/MantTV.jpeg" alt="">
+            <p>Mant-2018</p>
+        </div>
+        <div class="col">
+            <a href="">
+            <img src="images/Movies/jaws.jpeg" alt="">
+            <p>Jaws-2010</p>
+        
+        </div>
+        <div class="col">
+            <a href="">
+            <img src="images/TvShows/10.jpeg" alt="">
+            <p>The-Law-Finally-Grew-a-Pair-2010</p>
+        </div>
+    </div>
+   
+
+    
+        <footer class="master">
+            <P>Copyright@WarnerBros2024</P>
+            <span id="Facebook">
+                <a href="https://web.facebook.com/WarnerBrosPictures/?_rdc=1&_rdr">
+                    <img src="images/social media/fb.png"tittle="Facebook"alt="Facebook">
+    
+                </a>
+    
+            </span>
+            
+            <span id="Instagram">
+                <a href="https://www.instagram.com/warnerbrosentertainment/">
+                    <img src="images/social media/instagram.jpg"tittle="Instagram"alt="Instagram">
+    
+    
+                </a>
+    
+            </span>
+        </span>
+       
+    
+    <span id="Twitter">
+        <a href="https://twitter.com/warnerbros"> 
+            <img src="images/social media/twitter.jpg"tittle="Twitter"alt="Twitter">    
+    
+        </a>
+    
+       </span>
+    
+        </footer>
+    </body>  
+</html>

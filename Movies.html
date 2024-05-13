@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movies</title>
+    <style> 
+        body {
+        background-color: black;
+        padding: 20px;
+        float: none;
+        
+        
+        }
+        #maincontainer{
+            margin: auto;
+            box-sizing:border-box;
+        }
+        
+        
+        #header{position: relative;
+            top: 0;
+            left: 0;
+            padding: 30px 100px;
+            width: 100px;
+            display: flex;
+            justify-content: space-between;
+            align-items: left;
+            z-index: index 10000; 
+            
+        }
+        #header ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+    #header ul li{
+    list-style-type: none;
+    margin-left: 20px;
+    font-size: 14px;
+    
+    }
+    #header ul li a{
+    text-decoration: none;
+    padding: 6px 15px;
+    color:antiquewhite;
+    border-radius: 2px;
+    
+    }
+    #header ul li a:hover
+    {
+      background: linear-gradient(45deg,red,red);
+    
+    }
+    img#slide{
+                width: 40%;
+                height: 340px;
+                padding: none;
+                margin: none;
+                border-radius: 5%;
+                size-adjust: 50px;
+            }
+            
+        .row .col{
+    
+    align-content: space-between;
+    
+    align-items: flex-start;
+
+float: left;
+justify-content: left;
+align-items: center;
+margin: 20px;}
+.row .col:first-child{
+margin: 0px;
+margin-left: 5px;
+
+  }
+   .row .col img{
+    transition: 0.8s;
+    border-radius: 2%;
+
+  } .row .col img:hover{
+    transform: scale(1.1);
+    cursor: pointer;}
+    p{color: whitesmoke;}
+    #sitetitle{color: aliceblue;}
+    #sitemotto{color: aliceblue;}
+       
+footer{
+ background-color: black;
+  text-align: center;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  
+  }
+  footer p{text-align: center;}
+  footer a>img{
+    border-radius: 50%;
+    height: 45px;
+    
+  }
+
+  @media  (max-width:500px) {
+    body
+  {
+    background-color: gray;
+   
+  
+    margin: auto;
+    
+  }
+    #ulmenu li
+    {
+      display: block;
+   
+  
+    }
+   
+#header ul{
+  display: block;
+  justify-content: left;
+  
+  }
+}
+
+ 
+
+ 
+
+
+    
+            
+            </style>
+</head>
+<body>
+<div id="maincontainer">
+    <header id="header">
+        <img src="images/Movies/Screenshot 2024-04-20 223802.png" alt="">
+        <div class="Movies">
+            <h1 id="sitetitle">Movies</h1>
+        </div>
+        
+        <ul>
+            <li><a href="Index.html" class="active"><b>Home</b></a></li>
+            <li><a href="Movies.html" class="active"><b>Movies</b></a></li>
+            <li><a href="Tv Shows.html" class="active"><b>TvShows</b></a></li>
+            <li><a href="Games & Apps.html" class="active"><b>Games&Apps</b></a></li>
+            <li><a href="Collections.html" class="active"><b>Collections</b></a></li>
+            <li><a href="Feedback.html" class="active"><b>Feedback</b></a></li>
+         </ul>
+         
+    </header>
+    
+    <h2 id="sitemotto">Watchhh and Enjoy our Movies!</h2> 
+    <div class="sec">
+
+        <img id="slide" src="" alt="Gallery Image" title="Movies" onerror="this.onerror=null; this.src=images/TvShows;">
+    </div>
+    <script>
+        //create image array
+        var arrimages=new Array();
+        //add images to array
+        for(var k=0;k<10;k++){
+            arrimages[k]="images/Moviess/"+ k +".jpeg";
+        }
+        //variable for current image index
+        var currentimageindex=0;
+        //slideshow function
+        function Slideshow(){
+            //get image tag and load image
+            document.getElementById("slide").src=arrimages[currentimageindex];
+            //tinary operater
+            currentimageindex=(currentimageindex<=arrimages.length-1)?currentimageindex+1:0;
+        }
+        //call slideshow everytime u want(every 5/10 secs)
+        setInterval("Slideshow()",2000);
+    </script>
+    
+    <div class="row">
+
+        <div class="col">
+            <a href="Halloween.html">
+            <img src="images/Movies/Hallowen.jpeg" alt="">
+            <p>Halloween-2010</p>
+        </div>
+        
+        <div class="col">
+            <a href="JurassicPark.html">
+            <img src="images/Movies/JurassicPark.jpeg" alt="">
+            <p>JurassicPark-2010</p>
+        </div>
+        <div class="col">
+            <a href="BlackPanther.html">
+            <img src="images/Moviess/0.jpeg" alt="">
+            <p>Black Panther-2010</p>
+
+
+        </div>
+        
+        <div class="col">
+            <a href="AdamDriver.html">
+            <img src="images/Moviess/1.jpeg" alt="">
+            <p>Adam Driver-2023</p>
+
+        </div>
+        
+        <div class="col">
+            <a href="">
+            <img src="images/Moviess/2.jpeg" alt="">
+            <p>Iron Man-2017</p>
+        </div>
+
+        <div class="col">
+            <a href="">
+            <img src="images/Movies/iconic.jpeg" alt="">
+            <p>Iconic-2017</p>
+        </div>
+        <div class="col">
+            <a href="">
+            <img src="images/Moviess/10.jpeg" alt="">
+            <p>Clover Field-2017</p>
+        </div>
+
+        <div class="col">
+            <a href="">
+            <img src="images/Moviess/3.jpeg" alt="">
+            <p>Top Gun-2019</p>
+
+
+        </div>
+        <div class="col">
+            <a href="">
+            <img src="images/Moviess/4.jpeg" alt="">
+            <p>Sicario-2023</p>
+
+        </div>
+        <div class="col">
+            <a href="">
+            <img src="images/Moviess/5.jpeg" alt="">
+            <p>After-2021</p>
+
+
+        </div>
+        <div class="col">
+            <a href="">
+            <img src="images/Moviess/6.jpeg" alt="">
+            <p>The-Silence-of-the-Lamps-2014</p>
+        </div>
+        <div class="col">
+            <a href="">
+            <img src="images/Moviess/7.jpeg" alt="">
+            <p>Lorem Ipsun-2014</p>
+        </div>
+    </div>
+       
+
+        <footer>
+            <P>Copyright@WarnerBros2024</P>
+            
+            <span id="Facebook">
+                <a href="https://web.facebook.com/WarnerBrosPictures/?_rdc=1&_rdr">
+                    <img src="images/social media/fb.png"tittle="Facebook"alt="Facebook">
+    
+                </a>
+    
+            </span>
+           
+            <span id="Instagram">
+                <a href="https://www.instagram.com/warnerbrosentertainment/">
+                    <img src="images/social media/instagram.jpg"tittle="Instagram"alt="Instagram">
+    
+    
+                </a>
+    
+            </span>
+        </span>
+       
+    
+     <span id="Twitter">
+        <a href="https://twitter.com/warnerbros"> 
+            <img src="images/social media/twitter.jpg"tittle="Twitter"alt="Twitter">    
+    
+        </a>
+    
+       </span>
+    
+        </footer>
+
+     
+     
+   
+     
+    
+</div>
+</body> 
+
+</html>

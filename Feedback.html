@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback</title>
+    <style>
+         * {
+          box-sizing:content-box; 
+           
+        }body{background-color:black;}
+        label{
+            display: inline-block;
+            width: 100px;
+            
+            text-align: left;
+            color: aliceblue;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 200px;
+            font-style: inherit;
+        }
+        
+        #header ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+    #header ul li{
+    list-style-type: none;
+    margin-left: 20px;
+    font-size: 14px;
+    
+    }
+    #header ul li a{
+    text-decoration: none;
+    padding: 6px 15px;
+    color:antiquewhite;
+    border-radius: 2px;
+
+    
+    }
+    #header ul li a:hover
+    {
+      background: linear-gradient(45deg,red,red);
+    
+    }
+        input [type="text"] ,input[type="date"] ,input[type="email"] ,input[type="tel"] select{
+            width: 300;
+            color: rgba(141, 22, 201, 0.266);
+        }
+        .container
+        { background-color: rgba(32, 32, 32, 0.914);
+
+        }
+        #legend{color: aliceblue;}
+           
+footer{
+ background-color: black;
+  text-align: center;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  
+  }
+  footer a>img{
+    border-radius: 50%;
+    height: 45px;
+  }
+
+ 
+
+
+    </style>
+</head>
+  <body>
+  <header id="header">
+    <img src="images/Movies/Screenshot 2024-04-20 223802.png" alt="">
+    
+    <ul>
+        <li><a href="Index.html" class="active"><b>Home</b></a></li>
+        <li><a href="Movies.html" class="active"><b>Movies</b></a></li>
+        <li><a href="Tv Shows.html" class="active"><b>TvShows</b></a></li>
+        <li><a href="Games & Apps.html" class="active"><b>Games&Apps</b></a></li>
+        <li><a href="Collections.html" class="active"><b>Collections</b></a></li>
+        <li><a href="Feedback.html" class="active"><b>Feedback</b></a></li>
+     </ul>
+     <input type="search"id="txtsearch" class="textbox"placeholder="search"/>
+    </header>
+    
+    <form name="suggestion" id="suggestion">
+        <fieldset id="fieldsetcontrols" class="container" >
+            <legend id="legend"> FeedBack box </legend>
+            <input type="hidden" id="customerid" name="customerid" class="input-field">
+            <label for="firstname">Firstname:</label>
+            <input type="text" id="firstname" name="firstname" placeholder="Firstname" required="true" oninvalid="SetCustomValidity('Please enter your Firstname!!')"oninput="SetCustomValidity('')"/></br>
+            <label for="surname">Surname:</label>
+            <input type="text" id="surnname" name="surname" placeholder="surname" required="true" oninvalid="SetCustomValidity('Please enter your Surname!!')"oninput="SetCustomValidity('')"/></br>   
+            <label for="gender">Gender:</label>
+            
+            <select id="gender" name="gender">
+                <option value="0">Select</option>
+                <option value="F">Female</option>
+                <option value="M">Male</option>
+            </select></br>    
+        <label for="dob">Date:</label>
+        <input type="date" id="dob" name="date" required="true"/></br>
+         
+        <label for="address">Suggestion:</label>
+        <input type="text" id="Suggestion" name="Suggestion" required="true" placeholder="Suggestion"required="true"oninvalid="SetCustomValidity('Please enter your suggestion!!')"oninput="SetCustomValidity('')"/></br>
+        
+        
+       
+        <label for="maritalstatus">Rate:</label>
+        <label> <input type="radio" id="maritalstatus" name="maritalstatus" value="p"/> Poor</input></label>
+        <label><input type="radio" id="maritalstatus" name="maritalstatus" value="a"/>Average</input></label>
+        <label><input type="radio" id="maritalstatus" name="maritalstatus" value="g"/>Good</input></label>
+        <label> <input type="radio" id="maritalstatus" name="maritalstatus" value="e"/>Exellent</input></label>
+        </br>
+        <label for="Continent">Continent:</label>
+        <select id="Continent" name="Continent">
+            <option value="0">Select</option>
+            <option value="Af">Africa</option>
+            <option value="As">Asia</option>
+            <option value="SM">South America</option>
+            <option value="NM">North America</option>
+            <option value="E">Europe</option>
+            <option value="Aus">Australia</option>
+        </select></br>
+        <label>Film Genres:</label>
+     <label for="preference1"> Horror</label><input type="checkbox"id="preference1"name="preference1" value="H"/>
+     <label for="preference2"> Action</label><input type="checkbox"id="preference2"name="preference2" value="A"/>
+     <label for="preference3"> Romance</label><input type="checkbox"id="preference3"name="preference3" value="R"/>
+     <label for="preference4"> Comedy</label><input type="checkbox"id="preference4"name="preference4" value="Car"/>
+     <label for="preference5"> Drama</label><input type="checkbox"id="preference5" name="preference5" value="D"/>
+     <hr>
+    
+     <input type="reset" value="Clear"id="clearbutton"name="clearbutton" class="button"/>
+     <button id="submitbutton"id="submit"name="submitbutton" class="button">Submit</button>
+     </fieldset>
+
+    </form>
+</body>
+    
+    <footer class="master">
+        <P>Copyright@WarnerBros2024</P>
+        <span id="Facebook">
+            <a href="https://web.facebook.com/WarnerBrosPictures/?_rdc=1&_rdr">
+                <img src="images/social media/fb.png"tittle="Facebook"alt="Facebook">
+
+            </a>
+
+        </span>
+       
+        <span id="Instagram">
+            <a href="https://www.instagram.com/warnerbrosentertainment/">
+                <img src="images/social media/instagram.jpg"tittle="Instagram"alt="Instagram">
+
+
+            </a>
+
+        </span>
+    </span>
+   
+
+<span id="Twitter">
+    <a href="https://twitter.com/warnerbros"> 
+        <img src="images/social media/twitter.jpg"tittle="Twitter"alt="Twitter">    
+
+    </a>
+
+   </span>
+
+    </footer>  
+</html>
